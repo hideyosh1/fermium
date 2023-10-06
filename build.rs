@@ -86,7 +86,8 @@ fn do_static_bundled() {
   );
 
   if target.contains("windows") {
-    println!("cargo:rustc-link-lib=static=SDL2-static");
+    println!("cargo:rustc-link-lib=static=SDL2main");
+    println!("cargo:rustc-link-lib=static=SDL2");
     println!("cargo:rustc-link-lib=user32");
     println!("cargo:rustc-link-lib=gdi32");
     println!("cargo:rustc-link-lib=winmm");
